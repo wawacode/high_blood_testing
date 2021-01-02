@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高血压分析</title>
+    <script src="/static/js/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet"  href="/static/css/jquery.mobile.min.css">
+    <script src="/static/js/jquery.mobile.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header"  data-theme="b"  data-position="fixed">
+            <!--定义一个按钮-->
+            <a href="#">设置</a>
+            <!--h3是一个标题标签-->
+            <h2>高血压分析</h2>
+        </div>
+        <div data-role="content">
+            <form action="/upload/" method="post">
+                <!--姓名栏-->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <h4>姓名</h4>
+                    </div>
+                    <div class="ui-block-b">
+                        <input type="text" name="username"/>
+                    </div>
+                </div>
+                <!--性别栏-->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                         <h4>性别</h4>
+                    </div>
+                    <div class="ui-block-b">
+                        <div data-role="controlgroup" data-type="horizontal">
+                            <label>
+                                <input type="radio" name="sex"  value="男"/>男
+                            </label>
+                            <label>
+                                <input type="radio" name="sex"  value="女"/>女
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--身高栏-->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <h4>身高</h4>
+                    </div>
+                    <div class="ui-block-b">
+                        <input type="text" name="tall"/>
+                    </div>
+                </div>
+                <!--体重栏-->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <h4>体重</h4>
+                    </div>
+                    <div class="ui-block-b">
+                        <input type="text" name="weight"/>
+                    </div>
+                </div>
+                <!--是否吸烟-->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        是否吸烟
+                    </div>
+                    <div class="ui-block-b">
+                        <div data-role="controlgroup" data-type="horizontal">
+                            <label>
+                                 <input type="radio" name="smoke" value="吸烟" />吸烟
+                            </label>
+                            <label>
+                                 <input type="radio" name="smoke" value="不吸" />不吸
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--是否饮酒-->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        是否饮酒
+                    </div>
+                    <div class="ui-block-b">
+                        <div data-role="controlgroup" data-type="horizontal">
+                            <label>
+                                 <input type="radio" name="drink" value="喝酒" />喝酒
+                            </label>
+                            <label>
+                                <input type="radio" name="drink"  value="不喝" />不喝
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="btn">提交问卷</button>
+            </form>
+        </div>
+
+        <div data-role="footer"  data-theme="b"  data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="home">首页</a></li>
+                    <li><a href="#" data-icon="gear">设置</a></li>
+                    <li><a href="#" data-icon="star">收藏</a></li>
+                    <li><a href="#" data-icon="info">我的</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
